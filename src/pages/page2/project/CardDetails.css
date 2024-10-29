@@ -1,0 +1,158 @@
+/* Container for each project card */
+.article-wrapper {
+  width: 300px; /* Card size */
+  transition: 0.15s all ease-in-out;
+  border-radius: 10px;
+  padding: 10px;
+  border: 4px solid transparent;
+  cursor: pointer;
+  background-color: white;
+  margin: 20px; /* Add margin to create space between cards */
+}
+
+/* Hover state for the card */
+.article-wrapper:hover {
+  box-shadow: 10px 10px 0 #4e84ff, 20px 20px 0 #4444bd;
+  border-color: #0578c5;
+  transform: translate(-20px, -20px);
+}
+
+/* Active state for the card */
+.article-wrapper:active {
+  box-shadow: none;
+  transform: translate(0, 0);
+}
+
+/* Flex container for tags */
+.types {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap to the next line */
+  place-content: flex-start;
+}
+
+/* Container for the project image */
+.container-project {
+  width: 100%;
+  height: 180px; /* Height of the image container */
+  background: gray; /* Placeholder for the image */
+  border-radius: 10px; /* Match the border-radius of the card */
+  overflow: hidden; /* Hide overflow to ensure rounded corners */
+  position: relative;
+}
+
+/* Ensure the image covers the container properly */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Project title styling */
+.project-title {
+  font-size: 1.5rem; /* Font size for the project title */
+  margin: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: black;
+}
+
+/* Flex container for title and hover icon */
+.flex-pr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for each project type tag */
+.project-type {
+  background: #b2b2fd;
+  color: #1a41cd;
+  font-weight: bold;
+  padding: 0.3em 0.7em;
+  border-radius: 15px;
+  font-size: 12px;
+  letter-spacing: -0.6px;
+}
+
+/* Styling for hover icon */
+.project-hover {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 9px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Ensure it has a visible background */
+}
+
+/* Rotate hover icon on card hover */
+.article-wrapper:hover .project-hover {
+  transform: rotate(-45deg);
+  background-color: #a6c2f0;
+}
+
+/* Truncate description to 2 lines */
+.project-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  /* Container for each project card */
+  .article-wrapper {
+    width: 100%; /* Increase card width for mobile */
+    margin: 10px auto; /* Center the card and reduce margin */
+    height: 100%;
+  }
+
+  /* Adjust image container height for mobile */
+  .container-project {
+    height: 150px; /* Reduced height for mobile */
+    
+  }
+
+  /* Project title styling */
+  .project-title {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  /* Styling for each project type tag */
+  .project-type {
+    font-size: 10px; /* Smaller font size for tags */
+    padding: 0.2em 0.5em; /* Adjust padding for tags */
+  }
+
+  /* Flex container for title and hover icon */
+  .flex-pr {
+    flex-direction: column; /* Stack title and hover icon vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  /* Styling for hover icon */
+  .project-hover {
+    margin-top: 5px; /* Add space between title and hover icon */
+  }
+
+  /* Truncate description to 3 lines for better visibility */
+  .project-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Allow more lines for description */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px; /* Reduce margin for better spacing */
+    display: none;
+  }
+}
+

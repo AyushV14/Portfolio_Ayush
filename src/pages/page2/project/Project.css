@@ -1,0 +1,147 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+
+.project-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-container {
+    height: 80vh;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(50px); /* Apply the blur effect to the background */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #ffe7e7;
+    font-weight: 400;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+  }
+  
+  
+  .card > span {
+    display: block;
+    margin: auto;
+    max-width: 150px;
+    margin-right: 150px;
+  }
+  
+  .container:hover .card {
+    filter: blur(3px);
+    opacity: .5;
+    transform: scale(.98);
+    box-shadow: none;
+  }
+  
+  .container:hover .card:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+    color: white;
+  }
+  
+/* From Uiverse.io by satyamchaudharydev */ 
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.more-projects {
+  font-family: 'Limelight'; /* Use the imported Limelight font */
+  font-size: 2.0rem; /* Adjust the font size as needed */
+  color: #ffe7e7; /* Set a color that matches your theme */
+  margin-top: 20px; /* Space between the projects and the message */
+  text-align: center; /* Center the text */
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .more-projects {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    margin-bottom: 15px; /* Optional: reduce bottom margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .more-projects {
+    font-size: 1rem; /* Further reduce font size for very small screens */
+    margin-bottom: 10px; /* Optional: further reduce bottom margin */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .project-container {
+    height: 80vh; /* Fixed height for the container */
+    width: 90%; /* Maintain width for smaller screens */
+    margin-top: 300px; /* Adjust top margin */
+    padding: 1rem; /* Adjust padding */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to fill the container */
+  }
+
+  .card {
+    margin: 10px 0; /* Add vertical spacing between cards */
+    width: 100%; /* Ensure cards take full width */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust font size for readability */
+    margin-bottom: 1rem; /* Reduce bottom margin */
+  }
+}
+
+  

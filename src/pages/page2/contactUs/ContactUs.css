@@ -1,0 +1,122 @@
+.contact-us {
+  display: flex;
+  flex-direction: row; /* Stack on small screens */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px; /* Add some padding */
+  gap: 20px;
+}
+
+.contact-container {
+  background: rgba(0, 128, 0, 0); /* Light green with transparency */
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.719);
+  width: 100%; /* Full width on small screens */
+  max-width: 600px; /* Limit max width */
+  transition: transform 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 100px;
+}
+
+.sidecontent {
+  width: 100%; /* Full width on small screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form,
+.feedback-section {
+  margin-bottom: 20px;
+}
+
+.contact-form label,
+.feedback-section h3 {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.contact-form input,
+.contact-form textarea,
+.feedback-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.feedback-section textarea:focus {
+  outline: none;
+  border-color: #006400;
+}
+
+.contact-form button,
+.feedback-section button {
+  background-color: #006400;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover,
+.feedback-section button:hover {
+  background-color: #004d00;
+}
+
+@media (max-width: 767px) {
+  .contact-us {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 90%; /* Reduce width for mobile */
+    max-width: 400px; /* Set a max width */
+    margin: 0 auto; /* Center the form */
+    font-size: 12px;
+
+  }
+
+  .contact-container {
+    padding: 15px; /* Adjust padding for mobile */
+    margin-top: 150px;
+    margin-left: 0px;
+  }
+  .contact-container h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .contact-form button,
+  .feedback-section button {
+    width: 100%; /* Make buttons full width */
+  }
+
+  .feedback-section {
+    width: 90%; /* Reduce width for mobile */
+    max-width: 400px; /* Set a max width */
+    margin: 0 auto; /* Center the feedback section */
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
